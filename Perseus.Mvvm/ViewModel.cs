@@ -1,4 +1,4 @@
-﻿namespace OPersei.Mvvm
+﻿namespace Perseus.Mvvm
 {
     public abstract class ViewModel : NotificationObject
     {

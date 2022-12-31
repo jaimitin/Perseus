@@ -1,7 +1,7 @@
-﻿using OPersei.Core.StringExtensions;
+﻿using Perseus.Core.Extensions;
 using System.Collections;
 
-namespace OPersei.Models
+namespace Perseus.Models
 {
     public static class TaggableExtensions
     {

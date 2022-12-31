@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>$(AssemblyName)</Title>
+		<Version>1.0.0</Version>
+		<Authors>jaimitin</Authors>
+		<Description>MVVM library for Perseus</Description>
+		<Copyright>$(Authors)</Copyright>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
+	</ItemGroup>
+
+</Project>

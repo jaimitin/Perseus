@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Core", "OPersei.Core\Perseus.Core.csproj", "{B8657992-7857-47EC-BBFC-4EEBD9ECD612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Core", "Perseus.Core\Perseus.Core.csproj", "{B8657992-7857-47EC-BBFC-4EEBD9ECD612}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Mvvm", "OPersei.Mvvm\Perseus.Mvvm.csproj", "{F5B81DC4-6577-40A4-BA2A-5E6F46A03155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Mvvm", "Perseus.Mvvm\Perseus.Mvvm.csproj", "{F5B81DC4-6577-40A4-BA2A-5E6F46A03155}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Models", "OPersei.Models\Perseus.Models.csproj", "{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Models", "Perseus.Models\Perseus.Models.csproj", "{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

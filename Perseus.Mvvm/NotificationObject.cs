@@ -1,11 +1,11 @@
-﻿using OPersei.Core;
+﻿using Perseus.Core;
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace OPersei.Mvvm
+namespace Perseus.Mvvm
 {
-    public abstract class NotificationObject : OPObject, INotifyPropertyChanged, INotifyPropertyChanging
+    public abstract class NotificationObject : PerseusObject, INotifyPropertyChanged, INotifyPropertyChanging
     {
         protected readonly Dictionary<string, List<string>> Dependencies = new();
 

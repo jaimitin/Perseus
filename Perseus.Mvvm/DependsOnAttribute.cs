@@ -1,4 +1,4 @@
-﻿namespace OPersei.Mvvm
+﻿namespace Perseus.Mvvm
 {
     /// <summary>
     /// Instructs a <see cref="NotificationObject"/> to update this property whenever the specified <paramref name="dependency"/> changes
