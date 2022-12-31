@@ -16,6 +16,16 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Core</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Core</RepositoryUrl>
+		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>

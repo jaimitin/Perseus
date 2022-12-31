@@ -16,10 +16,20 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</RepositoryUrl>
+		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="README.md">
+	    <PackagePath>\</PackagePath>
+	    <Pack>True</Pack>
+	  </None>
 	</ItemGroup>
 
 </Project>
