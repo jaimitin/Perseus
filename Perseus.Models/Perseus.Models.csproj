@@ -14,6 +14,8 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
