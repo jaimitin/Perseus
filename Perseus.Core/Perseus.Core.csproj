@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -19,13 +19,20 @@
 		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
+		<NuGetAPIKey>$([System.IO.File]::ReadAllText("nuget.secret"))</NuGetAPIKey>
+		<NuGetSource>https://api.nuget.org/v3/index.json</NuGetSource>
 	</PropertyGroup>
 
+	<Target Name="AutoPushNuGetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).snupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
+	</Target>
+
 	<ItemGroup>
-	  <None Update="README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>

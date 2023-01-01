@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -17,19 +17,26 @@
 		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</RepositoryUrl>
 		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
-		<!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
+		<NuGetAPIKey>$([System.IO.File]::ReadAllText("nuget.secret"))</NuGetAPIKey>
+		<NuGetSource>https://api.nuget.org/v3/index.json</NuGetSource>
 	</PropertyGroup>
+
+	<Target Name="AutoPushNuGetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).snupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
+	</Target>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="README.md">
-	    <PackagePath>\</PackagePath>
-	    <Pack>True</Pack>
-	  </None>
+		<None Update="README.md">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
 	</ItemGroup>
 
 </Project>
