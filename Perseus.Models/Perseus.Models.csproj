@@ -29,7 +29,7 @@
 	</Target>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
+		<PackageReference Include="OPerseus.Core" Version="1.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
