@@ -24,12 +24,12 @@
 	</PropertyGroup>
 
 	<Target Name="AutoPushNuGetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)" />
-		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).snupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)" />
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).snupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
 	</Target>
 
 	<ItemGroup>
-	  <PackageReference Include="OPerseus.Core" Version="1.0.1" />
+		<PackageReference Include="OPerseus.Core" Version="1.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
