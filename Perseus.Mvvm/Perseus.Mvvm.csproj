@@ -29,7 +29,7 @@
 	</Target>
 
 	<ItemGroup>
-		<PackageReference Include="OPerseus.Core" Version="1.0.1" />
+		<PackageReference Include="OPerseus.Core" Version="1.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
