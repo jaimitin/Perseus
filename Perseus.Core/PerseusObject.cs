@@ -13,7 +13,7 @@
         /// <summary>
         /// The identifier for this instance
         /// </summary>
-        public Guid ID { get; } = new();
+        public Guid ID { get; } = Guid.NewGuid();
 
         public PerseusObject()
         {

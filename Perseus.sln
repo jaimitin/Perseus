@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.secret = nuget.secret
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perseus.Mobile.MAUI", "Perseus.Mobile.MAUI\Perseus.Mobile.MAUI.csproj", "{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perseus.Core.Tests", "Perseus.Core.Tests\Perseus.Core.Tests.csproj", "{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
