@@ -1,0 +1,7 @@
+<Project>
+
+	<Target Name="AutoPushNuGetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release' And '$(NugetAutoPublish)' == 'true'">
+		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -apiKey $(NuGetAPIKey) -source $(NuGetSource)" />
+	</Target>
+
+</Project>

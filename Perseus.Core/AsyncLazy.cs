@@ -21,6 +21,12 @@ namespace Perseus.Core
         {
         }
 
+        /// <summary>
+        /// Gets an awaiter used to await the inner lazy value.
+        /// </summary>
+        /// <returns>
+        /// An awaiter instance.
+        /// </returns>
         public TaskAwaiter<T> GetAwaiter() => Value.GetAwaiter();
     }
 }

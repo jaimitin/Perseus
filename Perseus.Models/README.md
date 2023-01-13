@@ -1,2 +1,2 @@
-﻿# Perseus.Core
-Core library for Perseus
+﻿# Perseus.Models
+Data and Model library for Perseus

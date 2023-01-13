@@ -2,34 +2,19 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>$(AssemblyName)</Title>
-		<Version>1.0.1</Version>
-		<Authors>jaimitin</Authors>
-		<Description>MVVM library for Perseus</Description>
-		<Copyright>$(Authors)</Copyright>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</RepositoryUrl>
-		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryType>git</RepositoryType>
-		<NuGetAPIKey>$([System.IO.File]::ReadAllText("nuget.secret"))</NuGetAPIKey>
-		<NuGetSource>https://api.nuget.org/v3/index.json</NuGetSource>
 	</PropertyGroup>
 
-	<Target Name="AutoPushNuGetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'Release'">
-		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).nupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
-		<Exec Command="$(UserProfile)\.nuget\nuget.exe push &quot;bin/Release/$(PackageId).$(Version).snupkg&quot; -SkipDuplicate -apiKey $(NuGetAPIKey) -source $(NuGetSource)"/>
-	</Target>
+	<PropertyGroup>
+		<Title>$(AssemblyName)</Title>
+		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
+		<Version>1.0.2</Version>
+		<Description>MVVM library for Perseus</Description>
+		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Mvvm</RepositoryUrl>
+	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OPerseus.Core" Version="1.0.3" />
+		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
