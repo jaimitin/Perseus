@@ -15,6 +15,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
+		<ProjectReference Include="..\Perseus.Models\Perseus.Models.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

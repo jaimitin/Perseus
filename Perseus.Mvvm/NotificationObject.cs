@@ -5,22 +5,31 @@ using System.Runtime.CompilerServices;
 
 namespace Perseus.Mvvm
 {
+    /// <summary>
+    /// An object that implements <see cref="INotifyPropertyChanged"/> and <see cref="INotifyPropertyChanging"/>
+    /// </summary>
     public abstract class NotificationObject : PerseusObject, INotifyPropertyChanged, INotifyPropertyChanging
     {
+        /// <summary>
+        /// A map of property dependencies that should be updated when another property changes
+        /// </summary>
         protected readonly Dictionary<string, List<string>> Dependencies = new();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NotificationObject"/> class
+        /// </summary>
         protected NotificationObject()
         {
-            foreach (PropertyInfo property in GetType().GetProperties())
+            foreach(PropertyInfo property in GetType().GetProperties())
             {
                 IEnumerable<DependsOnAttribute> attributes = property.GetCustomAttributes<DependsOnAttribute>();
-                foreach (DependsOnAttribute attr in attributes)
+                foreach(DependsOnAttribute attr in attributes)
                 {
-                    if (attr != null)
+                    if(attr != null)
                     {
                         string dependency = attr.Dependency;
 
-                        if (!Dependencies.ContainsKey(dependency))
+                        if(!Dependencies.ContainsKey(dependency))
                         {
                             Dependencies.Add(dependency, new List<string>());
                         }
@@ -47,12 +56,12 @@ namespace Perseus.Mvvm
         /// </returns>
         protected virtual bool Set<T>(ref T field, T value, [CallerMemberName] string propertyName = "", Action? onChanging = null, Action? onChanged = null, Func<T, T, bool>? validateValue = null)
         {
-            if (EqualityComparer<T>.Default.Equals(field, value))
+            if(EqualityComparer<T>.Default.Equals(field, value))
             {
                 return false;
             }
 
-            if (validateValue != null && !validateValue(field, value))
+            if(validateValue != null && !validateValue(field, value))
             {
                 return false;
             }
@@ -75,9 +84,9 @@ namespace Perseus.Mvvm
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-            if (Dependencies.TryGetValue(propertyName, out List<string>? value))
+            if(Dependencies.TryGetValue(propertyName, out List<string>? value))
             {
-                foreach (string dependentProperty in value)
+                foreach(string dependentProperty in value)
                 {
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(dependentProperty));
                 }
