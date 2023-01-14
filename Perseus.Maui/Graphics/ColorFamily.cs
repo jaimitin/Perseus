@@ -3,7 +3,7 @@
 namespace Perseus.Maui.Graphics
 {
     /// <summary>
-    /// Represents a <see cref="Color"/> and its possible tints/shades
+    /// Represents a <see cref="Microsoft.Maui.Graphics.Color"/> and its possible tints/shades
     /// </summary>
     public readonly struct ColorFamily
     {
