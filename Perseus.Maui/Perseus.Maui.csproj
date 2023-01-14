@@ -7,14 +7,14 @@
 	<PropertyGroup>
 		<Title>$(AssemblyName)</Title>
 		<PackageId>$(AssemblyName.Insert(0,"O"))</PackageId>
-		<Version>1.0.2</Version>
-		<Description>Data and Model library for Perseus</Description>
-		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.Models</RepositoryUrl>
+		<Version>1.0.1</Version>
+		<Description>.NET MAUI library for Perseus</Description>
+		<PackageProjectUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.MAUI</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jaimitin/Perseus/tree/master/Perseus.MAUI</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Perseus.Core\Perseus.Core.csproj" />
+		<PackageReference Include="Microsoft.Maui.Graphics" Version="7.0.52" />
 	</ItemGroup>
 
 	<ItemGroup>

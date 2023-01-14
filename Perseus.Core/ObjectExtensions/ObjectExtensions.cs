@@ -8,6 +8,9 @@
         /// <summary>
         /// Assert that this object is not null
         /// </summary>
-        public static void NotNull(this object? obj, string? name = null) => ArgumentNullException.ThrowIfNull(obj, name);
+        public static void NotNull(this object? obj, string? name = null)
+        {
+            ArgumentNullException.ThrowIfNull(obj, name);
+        }
     }
 }

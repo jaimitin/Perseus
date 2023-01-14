@@ -34,29 +34,30 @@
         /// </returns>
         public bool Equals(PerseusObject? other)
         {
-            if (other is null)
+            if(other is null)
             {
                 return false;
             }
 
-            if (ReferenceEquals(this, other))
+            if(ReferenceEquals(this, other))
             {
                 return true;
             }
 
-            if (GetType() != other.GetType())
-            {
-                return false;
-            }
-
-            return ID.Equals(other.ID);
+            return GetType() == other.GetType() && ID.Equals(other.ID);
         }
 
         /// <inheritdoc/>
-        public override bool Equals(object? obj) => Equals(obj as PerseusObject);
+        public override bool Equals(object? obj)
+        {
+            return Equals(obj as PerseusObject);
+        }
 
         /// <inheritdoc/>
-        public override int GetHashCode() => ID.GetHashCode();
+        public override int GetHashCode()
+        {
+            return ID.GetHashCode();
+        }
 
         /// <summary>
         /// Determines whether two <see cref="PerseusObject"/> instances are equal.
@@ -66,12 +67,7 @@
         /// </returns>
         public static bool operator ==(PerseusObject? left, PerseusObject? right)
         {
-            if (left is null || right is null)
-            {
-                return false;
-            }
-
-            return left.Equals(right);
+            return left is not null && right is not null && left.Equals(right);
         }
 
         /// <summary>
@@ -80,7 +76,10 @@
         /// <returns>
         /// <see langword="true"/> if both objects are not equal; otherwise, <see langword="false"/>.
         /// </returns>
-        public static bool operator !=(PerseusObject? left, PerseusObject? right) => !(left == right);
+        public static bool operator !=(PerseusObject? left, PerseusObject? right)
+        {
+            return !(left == right);
+        }
 
         #endregion
 

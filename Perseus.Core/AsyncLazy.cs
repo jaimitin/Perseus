@@ -27,6 +27,9 @@ namespace Perseus.Core
         /// <returns>
         /// An awaiter instance.
         /// </returns>
-        public TaskAwaiter<T> GetAwaiter() => Value.GetAwaiter();
+        public TaskAwaiter<T> GetAwaiter()
+        {
+            return Value.GetAwaiter();
+        }
     }
 }
