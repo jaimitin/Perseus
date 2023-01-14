@@ -22,7 +22,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Maui", "Perseus.Mau
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Core.Tests", "Perseus.Core.Tests\Perseus.Core.Tests.csproj", "{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perseus.Maui.Tests", "Perseus.Maui.Tests\Perseus.Maui.Tests.csproj", "{54F67463-1A66-448B-8240-2F9D1FD11A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perseus.Maui.Tests", "Perseus.Maui.Tests\Perseus.Maui.Tests.csproj", "{54F67463-1A66-448B-8240-2F9D1FD11A30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7165E87B-14CE-472B-9E0C-0C8F9FBCF473}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D95E39DD-FBC5-49D6-8B76-0A854E21657C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8657992-7857-47EC-BBFC-4EEBD9ECD612} = {7165E87B-14CE-472B-9E0C-0C8F9FBCF473}
+		{F5B81DC4-6577-40A4-BA2A-5E6F46A03155} = {7165E87B-14CE-472B-9E0C-0C8F9FBCF473}
+		{A5D1A36F-1580-4A11-81A4-AECDA6EA1F30} = {7165E87B-14CE-472B-9E0C-0C8F9FBCF473}
+		{5D349D26-C3D7-47F4-A32F-26EE4AD0F8CA} = {7165E87B-14CE-472B-9E0C-0C8F9FBCF473}
+		{4113E3D6-DE08-4E8D-AFC5-1F14AE87911E} = {D95E39DD-FBC5-49D6-8B76-0A854E21657C}
+		{54F67463-1A66-448B-8240-2F9D1FD11A30} = {D95E39DD-FBC5-49D6-8B76-0A854E21657C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42693779-C365-407E-8038-9EA44540228F}
